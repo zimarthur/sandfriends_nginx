@@ -1,0 +1,7 @@
+2023-07-04 01:40:59,730:DEBUG:certbot._internal.main:certbot version: 2.6.0
+2023-07-04 01:40:59,730:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
+2023-07-04 01:40:59,730:DEBUG:certbot._internal.main:Arguments: []
+2023-07-04 01:40:59,731:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2023-07-04 01:40:59,784:DEBUG:certbot._internal.log:Root logging level set at 30
+2023-07-04 01:40:59,791:DEBUG:certbot._internal.plugins.selection:Requested authenticator None and installer None
+2023-07-04 01:40:59,791:DEBUG:certbot._internal.plugins.selection:No candidate plugin
