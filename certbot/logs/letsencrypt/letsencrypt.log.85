@@ -1,7 +1,52 @@
-2023-07-03 01:23:30,491:DEBUG:certbot._internal.main:certbot version: 2.6.0
-2023-07-03 01:23:30,495:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
-2023-07-03 01:23:30,495:DEBUG:certbot._internal.main:Arguments: []
-2023-07-03 01:23:30,495:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
-2023-07-03 01:23:30,530:DEBUG:certbot._internal.log:Root logging level set at 30
-2023-07-03 01:23:30,540:DEBUG:certbot._internal.plugins.selection:Requested authenticator None and installer None
-2023-07-03 01:23:30,540:DEBUG:certbot._internal.plugins.selection:No candidate plugin
+2023-07-03 23:56:21,901:DEBUG:certbot._internal.main:certbot version: 2.6.0
+2023-07-03 23:56:21,902:DEBUG:certbot._internal.main:Location of certbot entry point: /usr/local/bin/certbot
+2023-07-03 23:56:21,902:DEBUG:certbot._internal.main:Arguments: ['--cert-name', 'sandfriends.com.br', '--webroot', '--webroot-path', '/var/www/certbot/', '-d', 'sandfriends.com.br', '-d', 'quadras.sandfriends.com.br', '-d', 'app.sandfriends.com.br', '-d', 'teste.sandfriends.com.br', '-d', 'quadras.teste.sandfriends.com.br', '-d', 'app.teste.sandfriends.com.br']
+2023-07-03 23:56:21,902:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
+2023-07-03 23:56:21,918:DEBUG:certbot._internal.log:Root logging level set at 30
+2023-07-03 23:56:21,922:DEBUG:certbot._internal.plugins.selection:Requested authenticator webroot and installer None
+2023-07-03 23:56:21,927:DEBUG:certbot._internal.plugins.selection:Single candidate plugin: * webroot
+Description: Saves the necessary validation files to a .well-known/acme-challenge/ directory within the nominated webroot path. A seperate HTTP server must be running and serving files from the webroot path. HTTP challenge only (wildcards not supported).
+Interfaces: Authenticator, Plugin
+Entry point: webroot = certbot._internal.plugins.webroot:Authenticator
+Initialized: <certbot._internal.plugins.webroot.Authenticator object at 0x7facc5638f40>
+Prep: True
+2023-07-03 23:56:21,927:DEBUG:certbot._internal.plugins.selection:Selected authenticator <certbot._internal.plugins.webroot.Authenticator object at 0x7facc5638f40> and installer None
+2023-07-03 23:56:21,927:INFO:certbot._internal.plugins.selection:Plugins selected: Authenticator webroot, Installer None
+2023-07-03 23:56:21,977:DEBUG:certbot._internal.main:Picked account: <Account(RegistrationResource(body=Registration(key=None, contact=(), agreement=None, status=None, terms_of_service_agreed=None, only_return_existing=None, external_account_binding=None), uri='https://acme-v02.api.letsencrypt.org/acme/acct/1148753567', new_authzr_uri=None, terms_of_service=None), 5373cb5b54843f8187458d6284e178a1, Meta(creation_dt=datetime.datetime(2023, 6, 8, 13, 22, 6, tzinfo=<UTC>), creation_host='58ce1eac714a', register_to_eff=None))>
+2023-07-03 23:56:21,978:DEBUG:acme.client:Sending GET request to https://acme-v02.api.letsencrypt.org/directory.
+2023-07-03 23:56:21,980:DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): acme-v02.api.letsencrypt.org:443
+2023-07-03 23:56:22,081:DEBUG:urllib3.connectionpool:https://acme-v02.api.letsencrypt.org:443 "GET /directory HTTP/1.1" 200 752
+2023-07-03 23:56:22,082:DEBUG:acme.client:Received response:
+HTTP 200
+Server: nginx
+Date: Mon, 03 Jul 2023 23:56:22 GMT
+Content-Type: application/json
+Content-Length: 752
+Connection: keep-alive
+Cache-Control: public, max-age=0, no-cache
+X-Frame-Options: DENY
+Strict-Transport-Security: max-age=604800
+
+{
+  "keyChange": "https://acme-v02.api.letsencrypt.org/acme/key-change",
+  "meta": {
+    "caaIdentities": [
+      "letsencrypt.org"
+    ],
+    "termsOfService": "https://letsencrypt.org/documents/LE-SA-v1.3-September-21-2022.pdf",
+    "website": "https://letsencrypt.org"
+  },
+  "newAccount": "https://acme-v02.api.letsencrypt.org/acme/new-acct",
+  "newNonce": "https://acme-v02.api.letsencrypt.org/acme/new-nonce",
+  "newOrder": "https://acme-v02.api.letsencrypt.org/acme/new-order",
+  "renewalInfo": "https://acme-v02.api.letsencrypt.org/draft-ietf-acme-ari-01/renewalInfo/",
+  "revokeCert": "https://acme-v02.api.letsencrypt.org/acme/revoke-cert",
+  "xp7B5YNQzyo": "https://community.letsencrypt.org/t/adding-random-entries-to-the-directory/33417"
+}
+2023-07-03 23:56:22,106:DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): r3.o.lencr.org:80
+2023-07-03 23:56:22,175:DEBUG:urllib3.connectionpool:http://r3.o.lencr.org:80 "POST / HTTP/1.1" 200 503
+2023-07-03 23:56:22,176:DEBUG:certbot.ocsp:OCSP response for certificate /etc/letsencrypt/archive/sandfriends.com.br/cert1.pem is signed by the certificate's issuer.
+2023-07-03 23:56:22,177:DEBUG:certbot.ocsp:OCSP certificate status for /etc/letsencrypt/archive/sandfriends.com.br/cert1.pem is: OCSPCertStatus.GOOD
+2023-07-03 23:56:22,179:DEBUG:certbot._internal.display.obj:Notifying user: Certificate not yet due for renewal
+2023-07-03 23:56:32,132:INFO:certbot._internal.main:Keeping the existing certificate
+2023-07-03 23:56:32,132:DEBUG:certbot._internal.display.obj:Notifying user: Certificate not yet due for renewal; no action taken.
