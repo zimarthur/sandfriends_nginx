@@ -1,0 +1,4 @@
+.well-known/
+.well-known-demo/
+.well-known-dev/
+certbot/
