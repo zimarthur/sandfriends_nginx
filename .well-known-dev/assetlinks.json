@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sandfriends.app.dev",
+      "sha256_cert_fingerprints": [
+        "6C:C2:8A:70:14:60:7B:96:1B:BA:C4:94:96:72:BD:D5:C2:15:32:FA:05:33:E3:C5:19:D0:20:78:13:67:09:91"
+      ]
+    }
+  }
+]
